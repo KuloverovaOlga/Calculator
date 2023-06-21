@@ -44,7 +44,9 @@ buttons.forEach((button) => {
 
       case "=":
         let a = eval(display.innerText).toFixed(0).toString().length;
-        !Number.isInteger(eval(display.innerText))
+        let b = eval(display.innerText).toString().length;
+        // !Number.isInteger(eval(display.innerText))
+        b > 9 
           ? (display.innerText = eval(display.innerText).toFixed(9 - a))
           : (display.innerText = eval(display.innerText));
         AC.innerText = "C";
@@ -58,30 +60,3 @@ buttons.forEach((button) => {
     }
   });
 });
-
-// function toCamelCase(str){
-//   return str.replace(/[-_](.)/g, (_, v) => v.toUpperCase());
-//   }
-
-//   console.log(toCamelCase('a-Cat-Is_cute'))
-
-// function reverseWords(str) {
-//   return arr = str.split(' ').map(item => item.split('').reverse().join('')).join(' ')
-
-// }
-
-// function spinWords(string){
-//   return string.split(' ').map(word => {
-//     if (word.length > 4) {
-//       return word.split('').reverse().join('')
-//     } else {
-//       return word
-//     }
-//   }).join(' ')
-// }
-
-// function descendingOrder(n){
-//   return String(n).split('').sort().reverse().join('')
-//   }
-
-//   console.log(descendingOrder(123456789))
